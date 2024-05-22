@@ -1,23 +1,29 @@
-name = "loki"
+name = "tail-worker"
 main = "src/worker.js"
 compatibility_date = "2023-07-17"
+
+workers_dev = false
 
 [vars]
 ENV = "dev"
 DEBUG = "true"
 
-# STAGING!
+#
+# Staging
+#
 [env.staging]
-account_id = "fffa4b4363a7e5250af8357087263b3a"
+account_id = "4b04db071e62c1a6196639e9aa112d1b"
 
 [env.staging.vars]
 ENV = "staging"
-DEBUG = "true"
+DEBUG = "false"
 
-# PROD!
-[env.production]
-account_id = "fffa4b4363a7e5250af8357087263b3a"
+#
+# Live
+#
+[env.live]
+account_id = "4b04db071e62c1a6196639e9aa112d1b"
 
-[env.production.vars]
-ENV = "production"
+[env.live.vars]
+ENV = "live"
 DEBUG = "false"
